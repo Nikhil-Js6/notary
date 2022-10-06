@@ -20,11 +20,10 @@ function App() {
     }, []);
 
     const handleDelete = record => {
-      data.length > 1
-        ? setData(data.filter(e => {
+        setData(data.filter(e => {
             return e.name !== record.name
-          }))
-        : fetchData();
+        }))
+        data.length <= 1 && fetchData();
     }
 
     // const columns = [
