@@ -1,0 +1,12 @@
+.App {
+   max-width: 100%;
+   padding: 16px;
+   flex-direction: column;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.table {
+  width: 100%;
+  padding: 20px;
+}
