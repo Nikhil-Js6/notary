@@ -1,6 +1,5 @@
 import './App.css';
 import { useState, useEffect } from 'react';
-import { DataGrid } from '@mui/x-data-grid';
 import { Space, Table, Tag } from 'antd';
 import axios from 'axios';
 
@@ -9,7 +8,7 @@ function App() {
     const [data, setData] = useState([]);
 
     const fetchData = async () => {
-        const res = await axios.post('http://demo2211087.mockable.io/mock');
+        const res = await axios.post('https://demo2211087.mockable.io/mock');
         const newData = res.data?.companies?.map(company => {
             return { id: Math.ceil(Math.random() * 100), tags: [company.status], status: undefined, ...company }
         });
